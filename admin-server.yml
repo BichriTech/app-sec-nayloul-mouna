@@ -1,0 +1,35 @@
+server:
+  port: 2801
+
+spring:
+  datasource:
+    continue-on-error: true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    initialization-mode: always
+    initialize: true
+    password: passerapasici
+    schema: classpath:/schema.sql
+    url: jdbc:mysql://localhost:3306/nayloul_admin_dba
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
+    show-sql: true
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:1654/eureka/

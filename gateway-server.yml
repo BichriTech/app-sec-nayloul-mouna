@@ -1,0 +1,11 @@
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:1654/eureka/
+internal:
+  lb:
+    uri: http://localhost
+server:
+  port: 2828
