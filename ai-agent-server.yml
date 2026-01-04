@@ -1,0 +1,12 @@
+server:
+  port: 2802
+
+spring:
+  application:
+    name: ai-agent-server
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      chat:
+        options:
+          model: gpt-4.1
