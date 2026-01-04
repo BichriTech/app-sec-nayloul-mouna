@@ -33,3 +33,10 @@ eureka:
     register-with-eureka: true
     service-url:
       defaultZone: http://localhost:1654/eureka/
+
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      chat:
+        options:
+          model: gpt-4.1
