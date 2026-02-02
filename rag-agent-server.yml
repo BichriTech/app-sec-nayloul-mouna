@@ -7,7 +7,7 @@ spring:
 
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5438/rag_database
+    url: jdbc:postgresql://localhost:5438/rag_nayloul_db
     username: postgres
     password: passerapasici
 
