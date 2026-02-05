@@ -63,3 +63,10 @@ management:
     health:
       show-details: always
 
+logging:
+  level:
+    com.bichri: DEBUG
+    org.springframework.ai: DEBUG
+    org.apache.fontbox: ERROR  # This will hide font warnings
+    org.apache.pdfbox: ERROR   # This will hide PDFBox warnings
+
