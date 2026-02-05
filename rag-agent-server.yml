@@ -38,6 +38,12 @@ spring:
         distance-type: COSINE_DISTANCE
         dimensions: 1536
 
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 50MB
+      max-request-size: 50MB
+
 eureka:
   client:
     fetch-registry: true
@@ -54,8 +60,3 @@ management:
     health:
       show-details: always
 
-  servlet:
-    multipart:
-      enabled: true
-      max-file-size: 50MB
-      max-request-size: 50MB
