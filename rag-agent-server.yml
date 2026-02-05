@@ -1,5 +1,8 @@
 server:
   port: 2802
+  tomcat:
+    max-swallow-size: 100MB
+    max-http-form-post-size: 100MB
 
 spring:
   application:
@@ -41,8 +44,8 @@ spring:
   servlet:
     multipart:
       enabled: true
-      max-file-size: 50MB
-      max-request-size: 50MB
+      max-file-size: 100MB
+      max-request-size: 100MB
 
 eureka:
   client:
