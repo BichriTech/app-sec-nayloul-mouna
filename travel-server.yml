@@ -1,0 +1,41 @@
+server:
+  port: 2802
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: passerapasici
+    url: jdbc:mysql://localhost:3306/travel_db
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
+    show-sql: true
+#  ai:
+#    openai:
+#      api-key: ${OPENAI_API_KEY}
+#      base-url: https://api.openai.com
+#      chat:
+#        options:
+#          model: gpt-4o
+#          temperature: 0
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:1654/eureka/

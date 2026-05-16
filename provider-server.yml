@@ -1,15 +1,11 @@
 server:
-  port: 2807
+  port: 2803
 
 spring:
   datasource:
-    continue-on-error: true
     driver-class-name: com.mysql.cj.jdbc.Driver
-    initialization-mode: always
-    initialize: true
     password: passerapasici
-    schema: classpath:/schema.sql
-    url: jdbc:mysql://localhost:3306/user_dba
+    url: jdbc:mysql://localhost:3306/provider_db
     username: root
   jpa:
     hibernate:
@@ -19,6 +15,15 @@ spring:
         dialect: org.hibernate.dialect.MySQLDialect
         format_sql: true
     show-sql: true
+#  ai:
+#    openai:
+#      api-key: ${OPENAI_API_KEY}
+#      base-url: https://api.openai.com
+#      chat:
+#        options:
+#          model: gpt-4o
+#          temperature: 0
+
 management:
   endpoint:
     health:
@@ -27,6 +32,7 @@ management:
     web:
       exposure:
         include: '*'
+
 eureka:
   client:
     fetch-registry: true
